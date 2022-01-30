@@ -82,3 +82,44 @@ console.log(john)
 console.log(`${(mark.bmi > john.bmi) ? mark.name : john.name}'s bmi BMI ${(mark.bmi > john.bmi) ? mark.bmi : john.bmi} is higher than ${(mark.bmi > john.bmi) ? john.name : mark.name}'s BMI ${(mark.bmi > john.bmi) ? john.bmi : mark.bmi}`)
 
 
+for (let i = 1; i <= 10; i += 1) {
+    for (let j = 10; j >= 0; j -= 1) {
+        console.log(`${i} elevado a ${j} é ${i ** j}`);
+    }
+}
+
+let dice = Math.trunc(Math.random() * 12) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+
+    console.log(dice);
+
+    dice = Math.trunc(Math.random() * 12) + 1;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+
+for (let i = 0; i < bills.length; i++) {
+
+    tips[i] = (bills[i] >= 50 && bills[i] <= 300) ? bills[i] * 0.15 : bills[i] * 0.2;
+
+    totals[i] = tips[i] + bills[i];
+
+}
+
+console.log(tips, totals)
+
+
+function calculaAverage(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum / array.length
+}
+
+console.log(calculaAverage(totals)
+    , calculaAverage(tips));
