@@ -48,3 +48,37 @@ total.push(tip(dados[1]) + dados[1]);
 total.push(tip(dados[2]) + dados[2]);
 
 console.log(total);
+
+
+
+const jonas = {
+    'name': "Jonas",
+    'friends': 3,
+    'bestFriend': 'Michael'
+};
+
+console.log(`${jonas.name} has ${jonas.friends} friends, and his best friend is called ${jonas.bestFriend}`);
+
+
+let bmi = (mass, heigth) => mass / ((heigth) * 2);
+console.log('bmi= ' + bmi(50000000, 500));
+const mark = {
+    name: 'Mark Miller',
+    weight: 78,
+    heigth: 1.69,
+    calcBMI: function () { this.bmi = (this.weight) / (this.heigth ** 2); return this.bmi },
+}
+mark.calcBMI()
+console.log(mark)
+const john = {
+    name: 'John Smith',
+    weight: 92,
+    heigth: 1.95,
+    calcBmi: function () { this.bmi = (this.weight) / (this.heigth ** 2); return this.bmi }
+}
+john.calcBmi();
+console.log(john)
+
+console.log(`${(mark.bmi > john.bmi) ? mark.name : john.name}'s bmi BMI ${(mark.bmi > john.bmi) ? mark.bmi : john.bmi} is higher than ${(mark.bmi > john.bmi) ? john.name : mark.name}'s BMI ${(mark.bmi > john.bmi) ? john.bmi : mark.bmi}`)
+
+
