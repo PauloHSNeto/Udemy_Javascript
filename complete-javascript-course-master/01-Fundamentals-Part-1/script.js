@@ -30,10 +30,15 @@ else console.log("John BMI is higher");
 dolphinsAverage = (97 + 112 + 101) / 3
 koalasAverage = (109 + 95 + 106) / 3
 
-if (dolphinsAverage >= 100 && koalasAverage >= 100) {
+if (dolphinsAverage >= 100 || koalasAverage >= 100) {
 
     if (dolphinsAverage > koalasAverage) { console.log("Dolphins win"); }
     else if (koalasAverage > dolphinsAverage) { console.log("Koalas win"); }
     else { console.log("DRAW"); }
 }
 else { console.log("NO winners") }
+
+
+const bill = 275;
+const tip = ((bill >= 50) && (bill <= 300)) ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
