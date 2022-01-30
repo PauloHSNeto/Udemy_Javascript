@@ -27,4 +27,13 @@ if (markBmi > johnBmi) console.log("Mark BMI is higher");
 else console.log("John BMI is higher");
 
 
+dolphinsAverage = (97 + 112 + 101) / 3
+koalasAverage = (109 + 95 + 106) / 3
 
+if (dolphinsAverage >= 100 && koalasAverage >= 100) {
+
+    if (dolphinsAverage > koalasAverage) { console.log("Dolphins win"); }
+    else if (koalasAverage > dolphinsAverage) { console.log("Koalas win"); }
+    else { console.log("DRAW"); }
+}
+else { console.log("NO winners") }
