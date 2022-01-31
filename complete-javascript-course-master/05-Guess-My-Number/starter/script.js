@@ -8,12 +8,13 @@ document.querySelector('.score').textContent = 99;
 document.querySelector('.guess').value = 77;
 console.log(document.querySelector('.guess').value);
 document.querySelector('.check').textContent = `Xáqui!`;*/
-
+//initial variables
 let number = Math.trunc(Math.random() * 20) + 1;
 let highscore = 0;
 let score = 10;
-document.querySelector('.score').textContent = score;
 
+document.querySelector('.score').textContent = score;
+//trying a guess//
 document.querySelector('.check').addEventListener(`click`, function () {
   let guess = Number(document.querySelector('.guess').value);
 
@@ -28,19 +29,23 @@ document.querySelector('.check').addEventListener(`click`, function () {
     document.querySelector('.highscore').textContent = highscore;
     //color change
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').textContent = number;
     //number style change
+    document.querySelector('.number').textContent = number;
     document.querySelector('.number').style.width = '50rem';
   }
 
-  //guess is diferent, refactoring//
+  //if wrong number//
   else if (guess !== number) {
+    //while score is > 0//
     if (score > 0) {
-      guess > number
-        ? (document.querySelector('.message').textContent = 'Try lower!!!!')
-        : 'Try higher!!!!';
+      if (guess > number) {
+        document.querySelector('.message').textContent = 'Try Lower!!!!';
+      } else {
+        document.querySelector('.message').textContent = 'Try Higher!!!!';
+      }
       score--;
       document.querySelector('.score').textContent = score;
+      //score == 0 //
     } else {
       document.querySelector('.message').textContent = 'You lost!!!!';
     }
@@ -67,6 +72,8 @@ document.querySelector('.check').addEventListener(`click`, function () {
     }
   }
 });*/
+
+// reset the game with buttom again//
 document.querySelector('.again').addEventListener(`click`, function () {
   score = 10;
   number = Math.trunc(Math.random() * 20) + 1;
