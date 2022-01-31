@@ -3,9 +3,11 @@
 
 function printforecast(array) {
   let answer = "";
+
   for (let i = 0; i < array.length; i++) {
     answer += ` ... ${array[i]}° in ${i + 1} days ... `;
   }
+
   console.log(answer);
 }
 
