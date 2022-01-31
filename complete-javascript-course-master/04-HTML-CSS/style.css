@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(230, 148, 134);
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 75px;
+}
+
+#pokename {
+  background-color: yellow;
+}
+
+.red {
+  color: red;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: x-large;
+  color: blueviolet;
+  background-color: aquamarine;
+}

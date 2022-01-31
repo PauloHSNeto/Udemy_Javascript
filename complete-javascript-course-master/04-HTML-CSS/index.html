@@ -7,8 +7,10 @@
     <title>Aprendendo HTML e CSS</title>
   </head>
 
+  <link href="style.css" rel="stylesheet" />
+
   <body>
-    <h1>Javascript is fun but so is HTML e CSS</h1>
+    <h1 class="red">Javascript is fun but so is HTML e CSS</h1>
     <p class="yellow">
       Javascript pode ser aprendido sem HMTL e CSS mas para manipulaçao de DOM é
       util ter ideias basicas de html e css
@@ -19,12 +21,15 @@
     <h1>Outro Heading</h1>
     <p class="green">Novo paragrafo</p>
 
-    <img id="pikachu" src="https://img.pokemondb.net/artwork/pikachu.jpg" />
+    <img
+      id="pikachu"
+      src="https://img.pokemondb.net/artwork/pikachu-lets-go.jpg"
+    />
 
-    <form id="myname">
+    <form id="pokename">
       <h2>Nome do pokemon</h2>
 
-      <p>Qual é o nome desse pokemon :D</p>
+      <p class="red">Qual é o nome desse pokemon :D</p>
       <input type="text" placeholder="Pika...?" />
       <button>Guess!</button>
     </form>
