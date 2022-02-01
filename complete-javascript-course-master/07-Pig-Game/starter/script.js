@@ -1,8 +1,16 @@
 'use strict';
 
-function roll_dice() {
-  let dice = Math.trunc(Math.random() * 5) + 1;
-  dice == 5 ? console.log(dice) : console.log(dice, roll_dice());
+function try_random(range, target) {
+  let dice_roll = Math.trunc(Math.random() * range) + 1;
+  dice_roll == target
+    ? console.log(dice_roll)
+    : console.log(dice_roll, roll_dice(range, target));
 }
 
-roll_dice();
+const dice = document.querySelector('.dice').ima;
+const roll_buttom = document.querySelector('.btn--roll');
+
+try_random(10, 5);
+roll_buttom.addEventListener('click', function () {
+  new_dice = Math.trunc(Math.random() * 6) + 1;
+});
